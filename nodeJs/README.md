@@ -1,86 +1,90 @@
-Bootcamp FullStack - Node.js API
-Este repositório contém o código desenvolvido durante o Aulão de Node.js, parte do Bootcamp FullStack. Aqui você encontrará uma API RESTful construída com Express.js e MongoDB, seguindo boas práticas de desenvolvimento.
+# 📚 Bootcamp FullStack - Node.js API
 
-🚀 Tecnologias Utilizadas
-Node.js - Ambiente de execução JavaScript
+![Node.js](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)
+![Express.js](https://img.shields.io/badge/Express.js-404D59?style=for-the-badge)
+![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
 
-Express - Framework para construção de APIs
+Projeto desenvolvido durante o Aulão de Node.js do Bootcamp FullStack, apresentando uma API RESTful com operações CRUD.
 
-MongoDB - Banco de dados NoSQL
+## 🚀 Começando
 
-Mongoose - ODM para MongoDB
+### Pré-requisitos
+- Node.js (v18+)
+- MongoDB Atlas ou local
+- NPM/Yarn
 
-Dotenv - Gerenciamento de variáveis de ambiente
-
-EJS - Template engine para renderização de views
-
-Nodemon - Reinício automático do servidor em desenvolvimento
-
-📋 Funcionalidades
-✅ CRUD completo de usuários
-✅ Rotas RESTful
-✅ Middlewares para logging
-✅ Conexão com MongoDB Atlas
-✅ Renderização de views com EJS
-✅ Tratamento de erros
-
-⚙️ Como Executar
-Clone o repositório:
-
-bash
+### Instalação
+1. Clone o repositório:
+```bash
 git clone https://github.com/LucasSantos96/Bootcamp-FSC.git
+cd Bootcamp-FSC
 Instale as dependências:
 
 bash
 npm install
-Configure suas variáveis de ambiente no arquivo .env:
+Configure o ambiente:
 
-env
-MONGODB_USERNAME=seu_usuario
-MONGODB_PASSWORD=sua_senha
+bash
+cp .env.example .env
+Edite o .env com suas credenciais do MongoDB.
+
 Inicie o servidor:
 
 bash
 npm run start:dev
-📌 Endpoints da API
-Método	Endpoint	Descrição
-GET	/home	Página inicial
-GET	/users	Lista todos os usuários
-GET	/users/:id	Obtém um usuário específico
-POST	/users	Cria um novo usuário
-PATCH	/users/:id	Atualiza um usuário
-DELETE	/users/:id	Remove um usuário
-GET	/views/users	Renderiza view com usuários
-🏗️ Estrutura do Projeto
-Bootcamp-FSC/
+🌐 Rotas da API
+Método	Endpoint	Descrição	Status
+GET	/home	Página inicial	200
+GET	/users	Lista todos usuários	200
+POST	/users	Cria novo usuário	201
+GET	/users/:id	Busca usuário específico	200/404
+PATCH	/users/:id	Atualiza usuário	200
+DELETE	/users/:id	Remove usuário	204
+GET	/views/users	Renderiza view EJS	200
+🛠️ Tecnologias
+Backend:
+
+Node.js
+
+Express
+
+Mongoose
+
+Dotenv
+
+Frontend:
+
+EJS (para views)
+
+Dev Tools:
+
+Nodemon
+
+Postman/Insomnia (para testar API)
+
+🏗️ Estrutura
 ├── src/
-│   ├── database/
-│   │   └── connect.js        # Conexão com MongoDB
-│   ├── models/
-│   │   └── user.model.js     # Modelo de usuário
-│   └── views/
-│       └── index.ejs         # Template EJS
-├── modules/
-│   ├── express.js            # Configuração do Express
-│   ├── fs.js                 # Operações com arquivos
-│   └── path.js               # Manipulação de caminhos
-├── index.js                  # Ponto de entrada
-└── package.json              # Dependências e scripts
-📚 Aprendizados
-Fundamentos do Node.js
+│   ├── controllers/    # Lógica das rotas
+│   ├── models/         # Schemas do MongoDB
+│   ├── routes/         # Definição de rotas
+│   ├── views/          # Templates EJS
+│   └── utils/          # Helpers e middlewares
+├── .env.example        # Modelo de variáveis
+├── index.js            # Entry point
+└── package.json        # Dependências
+📌 Exemplo de Uso
+Criar usuário:
 
-Criação de APIs RESTful com Express
+bash
+curl -X POST http://localhost:8080/users \
+  -H "Content-Type: application/json" \
+  -d '{
+    "firstName": "Lucas",
+    "lastName": "Santos",
+    "email": "lucas@example.com",
+    "password": "senha123"
+  }'
+📄 Licença
+Este projeto está licenciado sob a MIT License - veja LICENSE.md para detalhes.
 
-Operações CRUD com MongoDB/Mongoose
-
-Middlewares e tratamento de erros
-
-Renderização server-side com EJS
-
-Organização de projetos Node.js
-
-📝 Licença
-Este projeto está sob a licença MIT - veja o arquivo LICENSE para detalhes.
-
-Desenvolvido com 💙 por Lucas Santos
-Parte do Bootcamp FullStack
+<div align="center"> Feito com ❤️ por <a href="https://github.com/LucasSantos96">Lucas Santos</a> </div> ```
