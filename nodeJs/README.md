@@ -15,7 +15,7 @@ Projeto desenvolvido durante o Aulão de Node.js do Bootcamp FullStack, apresent
 
 ### Instalação
 1. Clone o repositório:
-```bash
+bash
 git clone https://github.com/LucasSantos96/Bootcamp-FSC.git
 cd Bootcamp-FSC
 Instale as dependências:
@@ -28,22 +28,21 @@ bash
 cp .env.example .env
 Edite o .env com suas credenciais do MongoDB.
 
-Inicie o servidor:
+### Inicie o servidor:
 
 bash
-npm run start:dev
-🌐 Rotas da API
-Método	Endpoint	Descrição	Status
-GET	/home	Página inicial	200
-GET	/users	Lista todos usuários	200
-POST	/users	Cria novo usuário	201
-GET	/users/:id	Busca usuário específico	200/404
-PATCH	/users/:id	Atualiza usuário	200
-DELETE	/users/:id	Remove usuário	204
-GET	/views/users	Renderiza view EJS	200
-🛠️ Tecnologias
-Backend:
+npm run start:dev <br>
+### 🌐 Rotas da API <br>
+Método	Endpoint	Descrição	Status <br>
+GET	/home	Página inicial	200 <br>
+GET	/users	Lista todos usuários	200 <br>
+POST	/users	Cria novo usuário	201 <br>
+GET	/users/:id	Busca usuário específico	200/404 <br>
+PATCH	/users/:id	Atualiza usuário	200 <br>
+DELETE	/users/:id	Remove usuário	204 <br>
+GET	/views/users	Renderiza view EJS	200 <br>
 
+## 🛠️ Tecnologias Backend:
 Node.js
 
 Express
@@ -62,29 +61,29 @@ Nodemon
 
 Postman/Insomnia (para testar API)
 
-🏗️ Estrutura
+### 🏗️ Estrutura <br>
 ├── src/
-│   ├── controllers/    # Lógica das rotas
-│   ├── models/         # Schemas do MongoDB
-│   ├── routes/         # Definição de rotas
-│   ├── views/          # Templates EJS
-│   └── utils/          # Helpers e middlewares
-├── .env.example        # Modelo de variáveis
-├── index.js            # Entry point
-└── package.json        # Dependências
-📌 Exemplo de Uso
+│   ├── controllers/    # Lógica das rotas <br>
+│   ├── models/         # Schemas do MongoDB <br>
+│   ├── routes/         # Definição de rotas <br>
+│   ├── views/          # Templates EJS <br>
+│   └── utils/          # Helpers e middlewares <br>
+├── .env.example        # Modelo de variáveis <br>
+├── index.js            # Entry point <br>
+└── package.json        # Dependências <br>
+### 📌 Exemplo de Uso
 Criar usuário:
 
 bash
-curl -X POST http://localhost:8080/users \
-  -H "Content-Type: application/json" \
-  -d '{
-    "firstName": "Lucas",
-    "lastName": "Santos",
-    "email": "lucas@example.com",
-    "password": "senha123"
-  }'
-📄 Licença
-Este projeto está licenciado sob a MIT License - veja LICENSE.md para detalhes.
+curl -X POST http://localhost:8080/users \ <br>
+  -H "Content-Type: application/json" \ <br>
+  -d '{ <br>
+    "firstName": "Lucas", <br>
+    "lastName": "Santos", <br>
+    "email": "lucas@example.com", <br>
+    "password": "senha123" <br>
+  }' <br>
+### 📄 Licença
+Este projeto está licenciado sob a MIT License - veja LICENSE.md para detalhes. <br>
 
-<div align="center"> Feito com ❤️ por <a href="https://github.com/LucasSantos96">Lucas Santos</a> </div> ```
+<div align="center"> Feito com ❤️ por <a href="https://github.com/LucasSantos96">Lucas Santos</a> </div> 
